@@ -14,10 +14,22 @@
     <header class="header">
         <div class=" flex container">
             <a href="#" class="brand"><strong>TrackL</strong></a>
-            <label class="bars" for="toggle"><i class="fas fa-bars"></i></label>
-            <input id="toggle" type="checkbox" />
-            <nav class="nav">
-                <ul class="flex-center navbar flex-column ">
+            <!-- <nav id="hamnav">
+                <label for="hamburger">&#9776;</label>
+                <input type="checkbox" id="hamburger"/>
+               
+                <div id="hamitems">
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About</a>
+                  <a href="tech.html">Tech</a>
+                  <a href="games.html">Games</a>
+                  <a href="reviews.html">Reviews</a>
+                </div>
+              </nav> -->
+            <nav class="nav" id="hamnav">
+                <label class="bars" for="hamburger"><i class="fas fa-bars"></i></label>
+                <input id="hamburger" type="checkbox" />
+                <ul class="flex-center navbar flex-column" id="hamitems">
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">About</a></li>
@@ -31,7 +43,7 @@
 
         <div class="hero-text">
             <h1>Track the learning<br /> process schedule </h1>
-            <a class="buttn">Get 30 Days Trial</a>
+            <a class="buttn bn">Get 30 Days Trial</a>
         </div>
         <div class="hero-image">
             <img src="./assets/hero.png" alt="hero" />
@@ -153,7 +165,9 @@
                     <div class=" flex margin-top">
                         <span class="bold light">Monthly</span>
                         <div class="mode">
-                            <div class="circle">|</div>
+                            <div class="circle">
+                                <hr>
+                            </div>
                         </div>
                         <span class="bold light">Yearly</span>
                     </div>

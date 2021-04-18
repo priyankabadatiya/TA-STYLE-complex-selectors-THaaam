@@ -142,6 +142,10 @@
          box-sizing: border-box;
      }
      
+     html {
+         font-size: 16px;
+     }
+     
      body {
          font-size: 18px;
          font-family: 'Inter', sans-serif;
@@ -150,6 +154,7 @@
      
      a {
          text-decoration: none;
+         font-size: 1rem;
      }
      
      .container {
@@ -231,6 +236,7 @@
      
      .flex-wrap {
          flex-wrap: wrap;
+         padding-top: 4.9rem;
      }
      
      .column {
@@ -274,7 +280,7 @@
      
      .hero-text {
          background-color: #59bfc2;
-         height: 100vh;
+         height: 86vh;
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -382,6 +388,13 @@
          align-items: center;
          justify-content: center;
      }
+     
+     .circle hr {
+         height: 40%;
+         width: 1px;
+         border: 1px solid white;
+         margin-top: .625rem;
+     }
      /* button */
      
      .btn {
@@ -415,6 +428,10 @@
          border-bottom: 1.3rem solid transparent;
      }
      
+     .bn {
+         margin-top: 7rem;
+     }
+     
      .para {
          color: #adaeb2;
          line-height: 1.4;
@@ -426,7 +443,7 @@
      .box {
          border: 3px solid #e8eefb;
          padding: 1.5rem;
-         border-radius: 12px;
+         border-radius: .75rem;
      }
      
      .plans li {
@@ -442,15 +459,15 @@
      
      .number::before {
          content: "$";
-         margin-right: 5px;
+         margin-right: .3125rem;
          font-size: 1.5rem;
      }
      
      .number::after {
          content: "/Month";
-         margin-left: 5px;
+         margin-left: .3125rem;
          color: #4e4e55;
-         font-size: 15px;
+         font-size: .93rem;
      }
      
      .cross {
@@ -503,7 +520,7 @@
      .buttn {
          background-color: white;
          border-radius: 5px;
-         margin-top: 1rem;
+         margin-top: 2rem;
          padding: 1rem 3rem;
          color: #314377;
          font-size: 1.4rem;
@@ -521,7 +538,7 @@
      
      .footer-icons {
          display: flex;
-         margin: 42px 0 0 0;
+         margin: 2.62rem 0 0 0;
      }
      
      .icons {
@@ -536,4 +553,88 @@
          color: white;
          font-weight: 500;
      }
+     
+     #hamnav label,
+     #hamburger {
+         display: none;
+     }
+     /* Horizontal Menu Items */
+     
+     #hamitems {
+         display: flex;
+     }
+     
+     #hamitems a {
+         width: 20%;
+         padding: 10px;
+         color: white;
+         text-decoration: none;
+         text-align: center;
+     }
      /*------------------------------- media----------------------------------- */
+     
+     @media only screen and (max-width: 600px) {
+         html {
+             font-size: 10px;
+         }
+         .hero-image img,
+         .graph-img img {
+             width: 100% !important;
+         }
+         .flex {
+             flex-direction: column;
+         }
+         .link a {
+             padding-top: 2rem;
+         }
+         .graph-img {
+             margin-top: 1rem;
+         }
+         article .btn {
+             height: 2.6rem;
+         }
+         #hamnav {
+             width: 100vw !important;
+             background: #59bfc2;
+             position: fixed;
+             top: 50px;
+             right: 0;
+             margin: 0;
+             padding: 0 20px;
+             z-index: 9999;
+         }
+         header {
+             z-index: 9999;
+             position: fixed !important;
+             background-color: #59bfc2;
+         }
+         footer {
+             text-align: center;
+         }
+         .footer-icons {
+             justify-content: center;
+         }
+         #hamnav label {
+             display: inline-block;
+             color: white;
+             font-style: normal;
+             font-size: 1.7rem;
+             padding: 10px;
+             position: fixed;
+             right: 0;
+             top: 0;
+         }
+         #hamitems a {
+             box-sizing: border-box;
+             display: block;
+             width: 100%;
+             border-top: 1px solid white;
+         }
+         #hamitems {
+             display: none;
+             margin-top: 50px;
+         }
+         #hamnav input:checked~#hamitems {
+             display: block;
+         }
+     }
